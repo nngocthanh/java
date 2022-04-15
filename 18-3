@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+	private static final String String = null;
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Mời bạn nhập chuỗi");
+		String s;
+		s = sc.nextLine();
+		//Câu1
+		String s1 = s.replaceAll(" ", "");
+		System.out.println("s1 = " + s1);
+		System.out.println("");
+		//Câu 2
+		String s2 = s.toUpperCase();
+		System.out.println("s2 = " + s2);
+		//Câu 3
+		for (int i = 0; i <s.length(); i++) {
+			char a = s.charAt(i);
+			System.out.println("Vị trí " + i +" là: " + a);
+		}
+		//Câu 4
+		String[] s3 = s.split("\\ ");
+		for (String tachchuoi : s3) {
+			System.out.println(tachchuoi);
+		}
+		//Câu 6
+		char[] chuoidaonguoc = s.toCharArray();
+		for(int i=0;i<s.length()/2;i++){ 
+	          char temp=chuoidaonguoc[i];
+	          chuoidaonguoc[i]=chuoidaonguoc[chuoidaonguoc.length-i-1];
+	          chuoidaonguoc[chuoidaonguoc.length-i-1]=temp;
+	     }
+		String kq = String .valueOf(chuoidaonguoc);
+		System.out.println("Chuoi nguoc nguoc la: " + kq);
+	}
+}
